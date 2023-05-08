@@ -1,7 +1,7 @@
 from django.contrib import admin
 from .models import *
 
-# Now, Register the models here.
+# Register your models here.
 
 class foodAdmin(admin.ModelAdmin):
     class Meta:
@@ -13,3 +13,4 @@ admin.site.register(Customer)
 admin.site.register(UserFooditem)
 admin.site.register(Category)
 admin.site.register(Fooditem,foodAdmin)
+

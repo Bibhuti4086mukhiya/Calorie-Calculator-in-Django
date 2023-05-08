@@ -91,7 +91,6 @@ def loginPage(request):
             messages.info(request,'username or password is invalid')
     return render(request,'login.html')
 
-
 @login_required(login_url='login')
 def logoutUser(request):
     logout(request)
@@ -120,7 +119,6 @@ def userPage(request):
     context={'CalorieLeft':CalorieLeft,'totalCalories':totalCalories,'cnt':cnt,'foodlist':finalFoodItems,'fooditem':fooditems,'myfilter':myfilter}
     return render(request,'user.html',context)
 
-
 def addFooditem(request):
     user=request.user
     cust=user.customer
@@ -132,3 +130,4 @@ def addFooditem(request):
     form=addUserFooditem()
     context={'form':form}
     return render(request,'addUserFooditem.html',context)
+

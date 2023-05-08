@@ -32,3 +32,6 @@ def admin_only(view_func):
         if group=='admin':
             return view_func(request,*args,**kwargs)
     return wrapper_func
+        
+            
+        

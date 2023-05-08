@@ -36,5 +36,6 @@ class Fooditem(models.Model):
 
 #for user page-------------------------------------------------------------
 class UserFooditem(models.Model):
-    customer = models.ManyToManyField(Customer ,blank=True)
+    customer = models.ManyToManyField(Customer,blank=True)
     fooditem=models.ManyToManyField(Fooditem)
+    
